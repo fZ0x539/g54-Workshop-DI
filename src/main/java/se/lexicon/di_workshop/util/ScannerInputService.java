@@ -1,13 +1,14 @@
 package se.lexicon.di_workshop.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
-@Service
+@Component
 public class ScannerInputService implements UserInputService {
-    private Scanner scanner;
+    private final Scanner scanner;
 
     @Autowired
     public ScannerInputService(Scanner scanner) {
